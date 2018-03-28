@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Neighbourhood Map App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/knockout-3.4.2.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+      <div class="sidebar-nav options-box align-left">
+        <p>Find A Place</p>
+        <input id="location-text" type="text" name="" value="">
+        <input id="location-button" type="button" value="Search">
+        <input id="filter-text" type="text" name="" value="">
+        <ul data-bind="foreach: venueList">
+          <li data-bind="text: title"></li>
+        </ul>
+      </div>
+      <div id="map" class="container-fluid">
+
+      </div>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn6AD_ji5rJwf5XeTKBtnLPzfw6Ye5cjQ&v=3&callback=initMap">
+    </script>
+  </body>
+</html>
